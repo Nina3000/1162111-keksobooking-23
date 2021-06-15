@@ -14,8 +14,7 @@ function getRandomNumber(min, max){
     return(num);
   }
 }
-//vscode жалуется на вызов консоли почему-то:
-//(unexpected console statement)
+
 getRandomNumber(7, 17);
 
 //src https://www.joshwcomeau.com/snippets/javascript/random/
@@ -38,3 +37,48 @@ function getRandomDecimal(min, max, fix){
 }
 getRandomDecimal(7, 17, 1);
 //https://javascript.info/number
+
+
+const getRandomArrayElement = (elements) => {
+  return elements[_.getRandomNumber(0, elements.length - 1)];
+};
+
+const TYPES = ['palace', 'flat', 'house', 'bungalow', 'hotel'];
+const FEATURES = ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner'];
+const CHECKINS = ['12:00', '13:00', '14:00'];
+const CHECKOUTS = ['12:00', '13:00', '14:00'];
+const URLS = []
+
+const randomAvatar = getRandomNumber (0, 11);
+if (randomAvatar === 10) {
+  ava = 10;
+} else {
+  ava = '' + 0 + randomAvatar;
+}
+}
+}
+const createOffer = () => {
+  return {
+    author = {
+      avatar: 'img/avatars/user' + ava + '.png'
+    }
+    offer = {
+    title: 'Номер',
+    address: 'адрес',
+    price: 4000,
+    type: getRandomArrayElement(TYPES),
+    rooms: 2,
+    quests: 2,
+    checkin: getRandomArrayElement(CHECKINS),
+    checkout: getRandomArrayElement(CHECKOUTS),
+    features: getRandomArrayElement(FEATURES),
+    description: 'уютно',
+    photos: 'url',
+    location: {
+      lat: '',
+      lng: ''
+    }
+  }
+  }
+}
+}
