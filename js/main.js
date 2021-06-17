@@ -49,6 +49,8 @@ const CHECKINS = ['12:00', '13:00', '14:00'];
 const CHECKOUTS = ['12:00', '13:00', '14:00'];
 const URLS = []
 
+const SIMILAR_OFFER_COUNT = 10;
+
 const randomAvatar = getRandomNumber (0, 11);
 if (randomAvatar === 10) {
   ava = 10;
@@ -82,3 +84,5 @@ const createOffer = () => {
   }
 }
 }
+
+const similarOffers = new Array(SIMILAR_OFFER_COUNT).fill(null).map(() => createOffer());
