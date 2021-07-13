@@ -42,3 +42,5 @@ rooms: getRandomNumber(1, 3),
 const similarOffers = new Array(SIMILAR_OFFER_COUNT).fill(null).map(() => createOffer());
 
 console.log(similarOffers);
+
+export {similarOffers};
