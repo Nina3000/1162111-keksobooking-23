@@ -1,3 +1,5 @@
+import {getRandomNumber, getRandomDecimal, getRandomArrayElement} from './random.js';
+
 const TYPES = ['palace', 'flat', 'house', 'bungalow', 'hotel'];
 const FEATURES = ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner'];
 const CHECKINS = ['12:00', '13:00', '14:00'];
