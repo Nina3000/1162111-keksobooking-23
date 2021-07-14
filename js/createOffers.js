@@ -11,10 +11,10 @@ const SIMILAR_OFFER_COUNT = 10;
 
 const createOffer = () => {
   const randomAvatar = getRandomNumber (1, 11);
-  let ava = '';
+  let ava = randomAvatar;
   if (randomAvatar < 10) {
     ava = '0' + randomAvatar;
-  }
+   }
   return {
     author: {
      avatar: 'img/avatars/user' + ava + '.png'
