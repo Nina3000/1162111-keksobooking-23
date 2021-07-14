@@ -21,7 +21,7 @@ const createCard = (data) => {
   title.textContent = data.offer.title;
 
   const price = card.querySelector('.popup__text--price');
-  price.textContent = data.offer.price + '₽/ночь';
+  price.textContent = data.offer.price + ' ₽/ночь';
 
   const capacity = card.querySelector('.popup__text--capacity');
   capacity.textContent = data.offer.rooms + ' комнаты для ' + data.offer.guests + ' гостей';
@@ -33,9 +33,15 @@ const createCard = (data) => {
   description.textContent = data.offer.description;
 
 const photoElement = card.querySelector('.popup__photos');
-const photos = card.offer.photos;
+const photos = data.offer.photos;
+photoElement.innerHTML='';
 photos.forEach((img) => {
-  img.src = card.offer.photos[i];
+  const el = document.createElement('img');
+  el.src=img;
+  el.width = '45';
+  el.height = '40';
+  el.classList.add('popup__photo');
+  photoElement.appendChild(el);
 })
 
 const featureListElement = card.querySelector('.popup__features');

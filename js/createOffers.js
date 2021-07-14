@@ -10,9 +10,9 @@ const SIMILAR_OFFER_COUNT = 10;
 
 
 const createOffer = () => {
-  const randomAvatar = getRandomNumber (0, 11);
+  const randomAvatar = getRandomNumber (1, 10);
   let ava;
-  if (randomAvatar !== 10) {
+  if (randomAvatar <= 10) {
     ava = '0' + randomAvatar;
   }
   return {
